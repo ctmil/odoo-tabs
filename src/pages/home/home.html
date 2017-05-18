@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+		<ion-buttons end>
+			<button ion-button primary block 
+				color="default" (click)="onLogout()">
+				<ion-icon name="log-out"></ion-icon>
+				 Logout	
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-list-header>
+			Mensajes	
+		</ion-list-header>
+		<ion-item *ngFor="let message of list_messages" (click)="onClickMessage(message)">
+			<div *ngIf="message.subject">
+				<h2>{{ message.subject }}</h2>
+			</div>
+			<div *ngIf="!message.subject">
+				<h2>Sin título</h2>
+			</div>
+			<p>Fecha: {{ message.date }}</p>
+			<p>De: {{ message.email_from }}</p>
+			<p>Tipo: {{ message.type }}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

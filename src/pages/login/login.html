@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+	<ion-input type="text" 	placeholder="Host"
+		required 
+		[(ngModel)]="host"></ion-input>
+    </ion-item>
+    <ion-item>
+	<ion-input type="text" 	placeholder="Database"
+		required 
+		[(ngModel)]="database"></ion-input>
+    </ion-item>
+    <ion-item>
+	<ion-input type="text" 	placeholder="Usuario"
+		required 
+		[(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+	<ion-input type="password" placeholder="Password"
+		required 
+		[(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Guardar preferencias</ion-label>
+        <ion-checkbox [(ngModel)]="save_preferences"></ion-checkbox>
+     </ion-item>
+  </ion-list>
+  <div padding>
+	<button ion-button primary block (click)="onClick()">
+		Login
+	</button>
+  </div>
+</ion-content>

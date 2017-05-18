@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Message {{ message_id }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-item>
+    <h3 primary>De {{ msg.email_from }}</h3> 
+   </ion-item>
+   <ion-item>
+    <h3 primary>Fecha {{ msg.date }}</h3> 
+   </ion-item>
+   <ion-item>
+    <h3 primary>Tipo {{ msg.type }}</h3> 
+   </ion-item>
+   <ion-item>
+    <h3 primary>Mensaje</h3> 
+    <p [innerHTML]="msg.body"></p>
+   </ion-item>
+</ion-content>
