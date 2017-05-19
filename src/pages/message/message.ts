@@ -23,6 +23,7 @@ export class MessagePage {
 		this.msg.email_from = this.navParams.data.msg.email_from;
 		this.msg.body = this.navParams.data.msg.body;
 		this.msg.type = this.navParams.data.msg.type;
+		this.msg.state_email = this.navParams.data.msg.state_email;
     }
 
 }

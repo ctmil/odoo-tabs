@@ -23,15 +23,18 @@ export class HomePage {
 	  });
 	  loading.present();
           this.domain = [['id','>','0']];
-          this.fields = ['id','subject','email_from','date','body','type'];
-          this.odooRPC.searchRead('mail.message', this.domain, this.fields).then(res => {
+          this.fields = ['id','subject','email_from','date','body','type','state_email'];
+          this.odooRPC.searchRead('as.mail.message', this.domain, this.fields).then(res => {
                    this.list_messages = res.records;
 		   loading.dismiss();
                   });
 	  }
 
 	onLogout() {
-		this.navCtrl.pop();	
+		this.navCtrl.pop();
+		//this.odooRPC.logout(true).then(res => {
+		//	this.navCtrl.pop();
+		//	});	
 		}
 
 	onClickMessage(messageParm) {

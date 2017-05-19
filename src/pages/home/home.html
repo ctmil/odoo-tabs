@@ -3,7 +3,7 @@
     <ion-title>Home</ion-title>
 		<ion-buttons end>
 			<button ion-button primary block 
-				color="default" (click)="onLogout()">
+				color="danger" (click)="onLogout()">
 				<ion-icon name="log-out"></ion-icon>
 				 Logout	
 			</button>
@@ -26,6 +26,7 @@
 			<p>Fecha: {{ message.date }}</p>
 			<p>De: {{ message.email_from }}</p>
 			<p>Tipo: {{ message.type }}</p>
+			<p>Estado: {{ message.state_email }}</p>
 		</ion-item>
 	</ion-list>
 </ion-content>
